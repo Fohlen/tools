@@ -1,0 +1,176 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>nf_core.bump_version &#8212; nf-core tools API 1.4 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="nf_core.create" href="create.html" />
+    <link rel="prev" title="Welcome to nf-core tools API documentation!" href="index.html" /> 
+  </head><body>
+<!-- your html code here -->
+<a href="https://nf-co.re"><img src="./_static/nf-core-logo.png" width="20%"></a>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="create.html" title="nf_core.create"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to nf-core tools API documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">nf-core tools API 1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-nf_core.bump_version">
+<span id="nf-core-bump-version"></span><h1>nf_core.bump_version<a class="headerlink" href="#module-nf_core.bump_version" title="Permalink to this headline">¶</a></h1>
+<p>Bumps the version number in all appropriate files for
+a nf-core pipeline.</p>
+<dl class="function">
+<dt id="nf_core.bump_version.bump_nextflow_version">
+<code class="descclassname">nf_core.bump_version.</code><code class="descname">bump_nextflow_version</code><span class="sig-paren">(</span><em>lint_obj</em>, <em>new_version</em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.bump_version.bump_nextflow_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bumps the required Nextflow version number of a pipeline.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lint_obj</strong> (<a class="reference internal" href="lint.html#nf_core.lint.PipelineLint" title="nf_core.lint.PipelineLint"><em>nf_core.lint.PipelineLint</em></a>) – A <cite>PipelineLint</cite> object that holds information
+about the pipeline contents and build files.</li>
+<li><strong>new_version</strong> (<em>str</em>) – The new version tag for the required Nextflow version.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="nf_core.bump_version.bump_pipeline_version">
+<code class="descclassname">nf_core.bump_version.</code><code class="descname">bump_pipeline_version</code><span class="sig-paren">(</span><em>lint_obj</em>, <em>new_version</em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.bump_version.bump_pipeline_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bumps a pipeline version number.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lint_obj</strong> (<a class="reference internal" href="lint.html#nf_core.lint.PipelineLint" title="nf_core.lint.PipelineLint"><em>nf_core.lint.PipelineLint</em></a>) – A <cite>PipelineLint</cite> object that holds information
+about the pipeline contents and build files.</li>
+<li><strong>new_version</strong> (<em>str</em>) – The new version tag for the pipeline. Semantic versioning only.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="nf_core.bump_version.update_file_version">
+<code class="descclassname">nf_core.bump_version.</code><code class="descname">update_file_version</code><span class="sig-paren">(</span><em>filename</em>, <em>lint_obj</em>, <em>pattern</em>, <em>newstr</em>, <em>allow_multiple=False</em><span class="sig-paren">)</span><a class="headerlink" href="#nf_core.bump_version.update_file_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the version number in a requested file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filename</strong> (<em>str</em>) – File to scan.</li>
+<li><strong>lint_obj</strong> (<a class="reference internal" href="lint.html#nf_core.lint.PipelineLint" title="nf_core.lint.PipelineLint"><em>nf_core.lint.PipelineLint</em></a>) – A PipelineLint object that holds information
+about the pipeline contents and build files.</li>
+<li><strong>pattern</strong> (<em>str</em>) – Regex pattern to apply.</li>
+<li><strong>newstr</strong> (<em>str</em>) – The replaced string.</li>
+<li><strong>allow_multiple</strong> (<em>bool</em>) – Replace all pattern hits, not only the first. Defaults to False.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">SyntaxError, if the version number cannot be found.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to nf-core tools API documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="create.html"
+                        title="next chapter">nf_core.create</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/bump_version.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="create.html" title="nf_core.create"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to nf-core tools API documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">nf-core tools API 1.4 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Phil Ewels, Sven Fillinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+    </div>
+  </body>
+</html>
